@@ -1,0 +1,31 @@
+<!--  app/views/movies/search_same_director_movies.html.erb -->
+<h2>Movies with same director  <em><%= params[:id] %></em></h2>
+
+<table class="table table-striped col-md-12" id="movies">
+  <thead>
+    <tr>
+     <th>Movie Title</th> 
+     <th>Rating</th>
+     <th>Director</th>
+     <th>Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td>
+          <%= movie.title %>
+        </td>
+        <td>
+          <%= movie.rating %>
+        </td>
+        <td>
+          <%= movie.director %>
+        </td>
+        <td>
+          <%= movie.release_date %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

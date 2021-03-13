@@ -1,5 +1,6 @@
 class CreateMovies < ActiveRecord::Migration
   def up
+    add_column :movies, :director, :string
     create_table :movies do |t|
       t.string :title
       t.string :rating
